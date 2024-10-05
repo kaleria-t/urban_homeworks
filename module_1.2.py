@@ -1,0 +1,20 @@
+grades = [[5, 3, 3, 5, 4], [2, 2, 2, 3], [4, 5, 5, 2], [4, 4, 3], [5, 5, 5, 4, 5]]
+students = {'Johnny', 'Bilbo', 'Steve', 'Khendrik', 'Aaron'}
+names = (sorted(list(students)))
+name_1 = names[0]
+name_2 = names[1]
+name_3 = names [2]
+name_4 = names [3]
+name_5 = names[4]
+st_1 = grades[0]
+st_2 = grades[1]
+st_3 = grades[2]
+st_4 = grades[3]
+st_5 = grades[4]
+sr_1 = sum(st_1) / len(st_1)
+sr_2 = sum(st_2) / len(st_2)
+sr_3 = sum(st_3) / len(st_3)
+sr_4 = sum(st_4) / len(st_4)
+sr_5 = sum(st_5) / len(st_5)
+sr_count = {name_1: sr_1, name_2: sr_2, name_3: sr_3, name_4: sr_4, name_5: sr_5}
+print (sr_count)

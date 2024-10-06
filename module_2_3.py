@@ -8,6 +8,8 @@ while n <= int(finish):
         print (var_)
         n = (n + 1)
         var_ = my_list[n]
+    elif var_ == 0:
+        continue
     else:
         break
 

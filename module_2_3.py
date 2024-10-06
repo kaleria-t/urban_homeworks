@@ -9,6 +9,8 @@ while n <= int(finish):
         n = (n + 1)
         var_ = my_list[n]
     elif var_ == 0:
+        n = (n + 1)
+        var_ = my_list[n]
         continue
     else:
         break

@@ -1,18 +1,18 @@
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 primes = list()
 not_primes = list()
-n = 0
-is_prime = True
+is_prime = bool
 for i in numbers:
+    is_prime = True
     for k in range(2, i):
-        is_prime = (i % k)
-        if is_prime == 0:
-            not_primes.append(i)
+        if i % k == 0:
+            is_prime = False
             break
-        elif is_prime != 0:
-            n = n + 1
-    if n == i - 2:
+    if is_prime == True:
         primes.append(i)
-    n = 0
+    else:
+        not_primes.append(i)
+
+
 print (primes)
 print (not_primes)

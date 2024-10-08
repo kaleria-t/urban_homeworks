@@ -3,7 +3,6 @@ primes = list()
 not_primes = list()
 n = 0
 is_prime = True
-print (9 < 89)
 for i in numbers:
     for k in range(2, i):
         is_prime = (i % k)

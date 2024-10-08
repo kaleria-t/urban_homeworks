@@ -3,6 +3,8 @@ primes = list()
 not_primes = list()
 is_prime = bool
 for i in numbers:
+    if i == 1:
+        continue
     is_prime = True
     for k in range(2, i):
         if i % k == 0:

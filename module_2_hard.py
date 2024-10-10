@@ -6,9 +6,7 @@ print (first_num)
 for i in range(1, first_num):
     for k in range(i+1, first_num):
         if first_num % (i + k) == 0:
-            list_nums.append(i)
-            list_nums.append(k)
-list_nums = str(list_nums)
-print(type(list_nums))
+            list_nums.append(str(i))
+            list_nums.append(str(k))
 print(''.join(list_nums))
-print(list_nums)
+

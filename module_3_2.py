@@ -1,11 +1,12 @@
 def send_email(message, recipient, *, sender = "university.help@gmail.com"):
     n = 0
     if ('@' in recipient) and ('@' in sender):
-        if ((".com" or ".ru" or ".net") in recipient) and ((".com" or ".ru" or ".net") in sender):
-            n = 0
-    else:
-        n = 1
-        print (f"Невозможно отправить письмо с адреса {sender} на адрес {recipient}.")
+        if ".com" in recipient or ".ru" in recipient or ".net" in recipient:
+            if ".com" in sender or ".ru" in sender or ".net" in sender:
+                n = 0
+            else:
+                n = 1
+                print(f"Невозможно отправить письмо с адреса {sender} на адрес {recipient}.")
 
     if (str(sender) == str(recipient)) and n == 0:
         n = 1

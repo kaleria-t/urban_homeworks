@@ -21,9 +21,3 @@ def sum_ (a):
             s += sum_(k)
     return s
 print (sum_(data_structure))
-
-
-
-
-#result = calculate_structure_sum(data_structure)
-#print(result)

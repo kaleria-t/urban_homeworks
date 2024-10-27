@@ -1,5 +1,3 @@
-from setuptools.command.build_ext import if_dl
-
 data_structure = [
 [1, 2, 3],
 {'a': 4, 'b': 5},

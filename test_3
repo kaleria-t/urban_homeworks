@@ -1,0 +1,16 @@
+def f():
+    calls = 0
+    a = 2
+    def wrapper():
+        nonlocal calls
+        nonlocal a
+        calls += 1
+        a += 10
+        return calls, a
+    return wrapper
+
+print(f())
+
+count_calls = f()
+o = count_calls
+print(count_calls())

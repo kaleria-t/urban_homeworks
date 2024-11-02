@@ -23,3 +23,14 @@ print(o(), '- кол-во вызовов функции после print(о())')
 print('Вывод: вызов "о()" изменяет счётчик')
 print(f(), 'вызов "f()" по прежнему не изменяет счётчик')
 print(count_calls())
+
+def num():
+    a = 2
+    def plus():
+        nonlocal a
+        a+=10
+        return a
+    return plus()
+print (num)
+a_num = num()
+print(a_num)

@@ -15,17 +15,24 @@ class Shop:
 
     def get_products(self):
         file = open(self.__file_name, 'r')
-        pprint(self.__file_name.read())
+        pprint(file.read())
         file.close()
 
     def add(self, *products):
         for i in products:
-            if i not in str('products.txt'): # TypeError: 'in <string>' requires string as left operand, not Product 
-                file_ = open(self.__file_name, 'a')
-                file_.write(i)
-                file_.close()
-            if i in self.__file_name:
+            file_ = open(self.__file_name, 'r')
+            file_.read()
+            if i.name in file_.read():
                 print(f'Продукт {i.name} уже есть в магазине')
+            if i.name not in file_.read():
+                file_ = open(self.__file_name, 'a')
+                file_.write(str(i))
+                file_.close()
+        
+
+
+
+
 
 s1 = Shop()
 p1 = Product('Potato', 50.5, 'Vegetables')

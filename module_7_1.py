@@ -20,7 +20,7 @@ class Shop:
 
     def add(self, *products):
         for i in products:
-            if i not in str('products.txt'):
+            if i not in str('products.txt'): # TypeError: 'in <string>' requires string as left operand, not Product 
                 file_ = open(self.__file_name, 'a')
                 file_.write(i)
                 file_.close()

@@ -1,6 +1,3 @@
-from _collections_abc import str_iterator
-
-
 def custom_write(file_name, strings):
     file = open(file_name, 'a', encoding='utf-8')
     string_positions = {}
@@ -8,7 +5,7 @@ def custom_write(file_name, strings):
     for i in strings:
         n += 1
         first_str_byte = file.tell()
-        file.write(i)
+        file.write(i+'\n')
         tuple_ = (n, first_str_byte)
         string_positions[tuple_] = i
     file.close()

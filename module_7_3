@@ -1,0 +1,21 @@
+class WordsFinder:
+    def __init__(self, *args):
+        self.file_names = []
+        for i in args:
+            self.file_names.append(i)
+
+    def get_all_words(self):
+        all_words = {}
+        for k in self.file_names: # k - имя файла внутри списка
+            with open(k, encoding='utf-8') as file:
+                list_words_for_all_words = [] # список, в который вносятся значения для словаря (для ключа 'k')
+                for str_ in file:
+                    str_ = str_.lower()
+                    p = [',', '.', '=', '!', '?', ';', ':', ' - ']
+                    for elem in p:
+                        if elem in str_:
+                            str_ = str_.replace(elem, '')
+                    str_ = str_.split()
+                    list_words_for_all_words.append(str_) # список дополяется, если в текстовом файле больше 1й строки
+                    all_words[k] = list_words_for_all_words
+        return all_words
